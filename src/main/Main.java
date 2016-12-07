@@ -10,7 +10,8 @@ public class Main {
 		File archivo1;
 		File archivo2;
 		
-		archivo1 = new File("C:/Users/Gerardo Shimokawa/Desktop/JQuery");
+		archivo1 = new File("C:"+File.separator+"Users"+File.separator+
+				"Gerardo Shimokawa"+File.separator+"Desktop"+File.separator+"JQuery");
 		
 		String[] nombres1 = archivo1.list();
 		
