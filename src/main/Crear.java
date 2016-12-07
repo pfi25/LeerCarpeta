@@ -14,4 +14,15 @@ public class Crear {
 		File archivo1 = new File(archivo,nombre);
 		archivo1.createNewFile();
 	}
+	
+	public void eliminar(File archivo){
+		archivo.delete();
+	}
+	
+	public String isOculto(File archivo){
+		if(archivo.isHidden())
+			return "Este archivo esta oculto";
+		else
+			return "Este archivo es visible";
+	}
 }

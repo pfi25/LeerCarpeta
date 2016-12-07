@@ -9,6 +9,9 @@ public class Main {
 
 		File archivo1;
 		File archivo2;
+		File archivo3;
+		File archivo4;
+		File archivo5;
 		Crear creando;
 
 		archivo1 = new File("C:" + File.separator + "Users" + File.separator + 
@@ -31,13 +34,16 @@ public class Main {
 		}
 		
 		creando = new Crear();
-		archivo1 = new File("C:/Users/Gerardo Shimokawa/Desktop/TXTJAVA/LeerCarpeta/JQuery");
-		creando.crearDirectorio(archivo1,"CARPETA1");
-		archivo2 = new File(archivo1,"CARPETA1");
+		archivo3 = new File("C:/Users/Gerardo Shimokawa/Desktop/TXTJAVA/LeerCarpeta/JQuery");
+		creando.crearDirectorio(archivo3,"CARPETA1");
+		archivo4 = new File(archivo3,"CARPETA1");
 		try {
-			creando.crearArchivo(archivo2,"HolaMundo.txt");
+			creando.crearArchivo(archivo4,"HolaMundo.txt");
 		} catch (IOException e) { 
 			System.out.println("No se puede crear el archivo");
 		}
+		archivo5 = new File(archivo4,"HolaMundo.txt");
+		System.out.println(creando.isOculto(archivo4));
+		creando.eliminar(archivo5);
 	}
 }
